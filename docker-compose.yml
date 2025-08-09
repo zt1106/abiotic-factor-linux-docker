@@ -1,6 +1,6 @@
 services:
   abiotic-server:
-    image: "ghcr.io/pleut/abiotic-factor-linux-docker:latest"
+    image: ":latest"
     restart: unless-stopped
     volumes:
       - "./gamefiles:/server"
@@ -9,12 +9,12 @@ services:
       - MaxServerPlayers=6
       - Port=7777
       - QueryPort=27015
-      - ServerPassword=password
-      - SteamServerName=Linux Server
+      - ServerPassword=q16
+      - SteamServerName=Q16
       - UsePerfThreads=true
-      - NoAsyncLoadingThread=true
-      - WorldSaveName=Cascade
-#     - AutoUpdate=true
+      - NoAsyncLoadingThread=false
+      - WorldSaveName=Q16
+      - AutoUpdate=true
 #     - AdditionalArgs=-SandboxIniPath=Config/WindowsServer/Server1Sandbox.ini
     ports:
       - "0.0.0.0:7777:7777/udp"
