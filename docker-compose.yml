@@ -1,6 +1,6 @@
 services:
   abiotic-server:
-    image: ":latest"
+    image: "boxxd/abiotic-factor-linux-docker:latest"
     restart: unless-stopped
     volumes:
       - "./gamefiles:/server"
